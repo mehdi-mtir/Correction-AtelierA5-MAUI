@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:GestionCommandes.Maui.Models"
+             xmlns:vm="clr-namespace:GestionCommandes.Maui.ViewModels"
+             x:Class="GestionCommandes.Maui.Views.CommandesPage"
+             x:DataType="vm:CommandesViewModel"
+             Title="Commandes"
+             BackgroundColor="{StaticResource GcFond}">
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="16" RowSpacing="12">
+
+        <!-- Ligne 0 : nombre de commandes, indicateur, bouton « + » -->
+        <Grid Grid.Row="0" ColumnDefinitions="*,Auto,Auto" ColumnSpacing="12">
+            <Label Text="{Binding Commandes.Count, StringFormat='{0} commande(s)'}"
+                   VerticalOptions="Center"
+                   TextColor="{StaticResource GcTexteSecondaire}" />
+            <ActivityIndicator Grid.Column="1" IsRunning="{Binding IsBusy}"
+                               IsVisible="{Binding IsBusy}"
+                               Color="{StaticResource GcPrimaire}" />
+            <Button Grid.Column="2" Text="+ Nouvelle"
+                    Style="{StaticResource PrimaryButton}"
+                    Command="{Binding NouvelleCommandeCommand}" />
+        </Grid>
+
+        <!-- Ligne 1 : la liste des commandes -->
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Commandes}">
+            <CollectionView.EmptyView>
+                <Label Text="Aucune commande." HorizontalOptions="Center"
+                       TextColor="{StaticResource GcTexteSecondaire}" />
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Commande">
+                    <Border Margin="0,0,0,8" Padding="12"
+                            BackgroundColor="{StaticResource GcCarte}"
+                            Stroke="{StaticResource GcBordure}"
+                            StrokeShape="RoundRectangle 8">
+
+                        <!-- Toucher : la commande touchée est passée au ViewModel de la page -->
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                              CommandParameter="{Binding .}"
+                              Command="{Binding Path=OuvrirDetailCommand,
+                                Source={RelativeSource
+                                  AncestorType={x:Type vm:CommandesViewModel}}}" />
+                        </Border.GestureRecognizers>
+
+                        <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto">
+                            <Label Text="{Binding Id, StringFormat='Commande n° {0}'}"
+                                   FontAttributes="Bold" FontSize="16" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Total, StringFormat='{0:N2}'}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                                   Text="{Binding ClientNom}"
+                                   TextColor="{StaticResource GcTexteSecondaire}" />
+                            <Label Grid.Row="1" Grid.Column="1"
+                                   Text="{Binding Statut}"
+                                   TextColor="{StaticResource GcTexteSecondaire}" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Ligne 2 : message d'erreur réseau -->
+        <Label Grid.Row="2" Text="{Binding Message}" TextColor="#C62828" />
+    </Grid>
+</ContentPage>

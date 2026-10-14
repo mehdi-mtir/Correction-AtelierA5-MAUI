@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:GestionCommandes.Maui.Models"
+             xmlns:vm="clr-namespace:GestionCommandes.Maui.ViewModels"
+             x:Class="GestionCommandes.Maui.Views.DetailCommandePage"
+             x:DataType="vm:DetailCommandeViewModel"
+             Title="{Binding CommandeId, StringFormat='Commande n° {0}'}"
+             BackgroundColor="{StaticResource GcFond}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"
+                               Color="{StaticResource GcPrimaire}" />
+
+            <!-- En-tête de la commande -->
+            <Border Padding="12" BackgroundColor="{StaticResource GcCarte}"
+                    Stroke="{StaticResource GcBordure}" StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="{Binding Commande.ClientNom}"
+                           FontSize="20" FontAttributes="Bold" />
+                    <Label TextColor="{StaticResource GcTexteSecondaire}"
+                           Text="{Binding Commande.DateCommande,
+                                          StringFormat='Passée le {0:dd/MM/yyyy}'}" />
+                    <Label Text="{Binding Commande.Statut, StringFormat='Statut : {0}'}"
+                           TextColor="{StaticResource GcTexteSecondaire}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Lignes : une ligne d'affichage par article -->
+            <Label Text="Articles" FontAttributes="Bold"
+                   TextColor="{StaticResource GcPrimaire}" />
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding Commande.Lignes}"
+                                 Spacing="6">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="models:LigneCommande">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label>
+                                <Label.Text>
+                                    <MultiBinding StringFormat="{}{0} × {1}">
+                                        <Binding Path="Quantite" />
+                                        <Binding Path="ProduitNom" />
+                                    </MultiBinding>
+                                </Label.Text>
+                            </Label>
+                            <Label Grid.Column="1"
+                                   Text="{Binding Montant, StringFormat='{0:N2}'}" />
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+
+            <!-- Total -->
+            <Label Text="{Binding Commande.Total, StringFormat='Total : {0:N2}'}"
+                   FontSize="18" FontAttributes="Bold" HorizontalOptions="End" />
+
+            <!-- Retour à la liste : route « .. » -->
+            <Button Text="Retour à la liste" Style="{StaticResource PrimaryButton}"
+                    HorizontalOptions="Start"
+                    Command="{Binding RetourCommand}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

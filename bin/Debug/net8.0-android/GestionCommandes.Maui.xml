@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GestionCommandes.Maui</name>
+    </assembly>
+    <members>
+        <member name="T:GestionCommandes.Maui.ViewModels.ClientsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.Clients">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.ClientsViewModel.clients"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.IsBusy">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.ClientsViewModel.isBusy"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.Message">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.ClientsViewModel.message"/>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.ClientsViewModel.chargerClientsCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.ChargerClientsCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.ChargerClientsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.ClientsViewModel.ChargerClientsAsync"/>.</summary>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.ClientsViewModel.invaliderJetonCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.InvaliderJetonCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.InvaliderJetonCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.ClientsViewModel.InvaliderJetonAsync"/>.</summary>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.ClientsViewModel.seDeconnecterCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.SeDeconnecterCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ClientsViewModel.SeDeconnecterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.ClientsViewModel.SeDeconnecterAsync"/>.</summary>
+        </member>
+        <member name="T:GestionCommandes.Maui.ViewModels.CommandesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.Commandes">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandesViewModel.commandes"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.IsBusy">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandesViewModel.isBusy"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.Message">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandesViewModel.message"/>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.CommandesViewModel.chargerCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.ChargerCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.ChargerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.CommandesViewModel.ChargerAsync"/>.</summary>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.CommandesViewModel.ouvrirDetailCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.OuvrirDetailCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.OuvrirDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.CommandesViewModel.OuvrirDetailAsync(GestionCommandes.Maui.Models.Commande)"/>.</summary>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.CommandesViewModel.nouvelleCommandeCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.NouvelleCommandeCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandesViewModel.NouvelleCommandeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.CommandesViewModel.NouvelleCommandeAsync"/>.</summary>
+        </member>
+        <member name="T:GestionCommandes.Maui.ViewModels.CommandeViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.ClientChoisi">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.clientChoisi"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.DateCommande">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.dateCommande"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.ProduitChoisi">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.produitChoisi"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.Quantite">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.quantite"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.EstConfirmee">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.estConfirmee"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.Erreurs">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.erreurs"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.Message">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.message"/>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.chargerCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.ChargerCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.ChargerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.CommandeViewModel.ChargerAsync"/>.</summary>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.CommandeViewModel.enregistrerCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.EnregistrerCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.CommandeViewModel.EnregistrerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.CommandeViewModel.Enregistrer"/>.</summary>
+        </member>
+        <member name="T:GestionCommandes.Maui.ViewModels.ConnexionViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ConnexionViewModel.Identifiant">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.ConnexionViewModel.identifiant"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ConnexionViewModel.MotDePasse">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.ConnexionViewModel.motDePasse"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ConnexionViewModel.Erreur">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.ConnexionViewModel.erreur"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ConnexionViewModel.IsBusy">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.ConnexionViewModel.isBusy"/>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.ConnexionViewModel.seConnecterCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.ConnexionViewModel.SeConnecterCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.ConnexionViewModel.SeConnecterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.ConnexionViewModel.SeConnecterAsync"/>.</summary>
+        </member>
+        <member name="T:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.CommandeId">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.commandeId"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.Commande">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.commande"/>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.IsBusy">
+            <inheritdoc cref="F:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.isBusy"/>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.chargerCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.ChargerCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.ChargerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.ChargerAsync"/>.</summary>
+        </member>
+        <member name="F:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.retourCommand">
+            <summary>The backing field for <see cref="P:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.RetourCommand"/>.</summary>
+        </member>
+        <member name="P:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.RetourCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GestionCommandes.Maui.ViewModels.DetailCommandeViewModel.RetourAsync"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Clients">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Clients" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Message">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Message" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Commandes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Commandes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ClientChoisi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ClientChoisi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateCommande">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateCommande" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProduitChoisi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProduitChoisi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Total">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Total" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Quantite">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Quantite" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EstConfirmee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EstConfirmee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Erreurs">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Erreurs" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Identifiant">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Identifiant" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MotDePasse">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MotDePasse" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Erreur">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Erreur" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CommandeId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CommandeId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Commande">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Commande" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Clients">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Clients" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Message">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Message" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Commandes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Commandes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ClientChoisi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ClientChoisi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateCommande">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateCommande" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProduitChoisi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProduitChoisi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Total">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Total" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Quantite">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Quantite" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EstConfirmee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EstConfirmee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Erreurs">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Erreurs" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Identifiant">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Identifiant" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MotDePasse">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MotDePasse" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Erreur">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Erreur" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CommandeId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CommandeId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Commande">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Commande" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions">
+            <summary>
+            A helper type with generated validation stubs for types deriving from <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservableValidator"/>.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(GestionCommandes.Maui.ViewModels.CommandeViewModel)">
+            <summary>
+            Creates a validation stub for <see cref="T:GestionCommandes.Maui.ViewModels.CommandeViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:GestionCommandes.Maui.ViewModels.CommandeViewModel"/> objects.</returns>
+        </member>
+    </members>
+</doc>

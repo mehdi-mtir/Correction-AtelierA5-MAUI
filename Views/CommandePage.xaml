@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:GestionCommandes.Maui.ViewModels"
+             x:Class="GestionCommandes.Maui.Views.CommandePage"
+             x:DataType="vm:CommandeViewModel"
+             Title="Nouvelle commande"
+             BackgroundColor="{StaticResource GcFond}">
+
+    <ScrollView>
+        <Grid Padding="16" RowSpacing="14" ColumnSpacing="12"
+              ColumnDefinitions="Auto,*"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+              WidthRequest="{OnIdiom Desktop=640, Default=-1}"
+              HorizontalOptions="{OnIdiom Desktop=Center, Default=Fill}">
+
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Saisie d'une commande"
+                   FontSize="22" FontAttributes="Bold"
+                   TextColor="{StaticResource GcPrimaire}" />
+
+            <Label Grid.Row="1" Text="Client" VerticalOptions="Center"
+                   TextColor="{StaticResource GcTexteSecondaire}" />
+            <Picker Grid.Row="1" Grid.Column="1" Title="Choisir un client"
+                    ItemsSource="{Binding Clients}"
+                    SelectedItem="{Binding ClientChoisi}" />
+
+            <Label Grid.Row="2" Text="Date" VerticalOptions="Center"
+                   TextColor="{StaticResource GcTexteSecondaire}" />
+            <DatePicker Grid.Row="2" Grid.Column="1" Format="dd/MM/yyyy"
+                        Date="{Binding DateCommande}" />
+
+            <Label Grid.Row="3" Text="Produit" VerticalOptions="Center"
+                   TextColor="{StaticResource GcTexteSecondaire}" />
+            <Picker Grid.Row="3" Grid.Column="1" Title="Choisir un produit"
+                    ItemsSource="{Binding Produits}"
+                    SelectedItem="{Binding ProduitChoisi}" />
+
+            <Label Grid.Row="4" Text="Quantité" VerticalOptions="Center"
+                   TextColor="{StaticResource GcTexteSecondaire}" />
+            <Entry Grid.Row="4" Grid.Column="1" Keyboard="Numeric"
+                   Placeholder="De 1 à 100" Text="{Binding Quantite}" />
+
+            <Border Grid.Row="5" Grid.ColumnSpan="2" Padding="12"
+                    BackgroundColor="{StaticResource GcCarte}"
+                    Stroke="{StaticResource GcBordure}"
+                    StrokeShape="RoundRectangle 8">
+                <Label Text="{Binding Total, StringFormat='Total : {0:N2}'}"
+                       FontSize="18" FontAttributes="Bold" HorizontalOptions="End" />
+            </Border>
+
+            <HorizontalStackLayout Grid.Row="6" Grid.ColumnSpan="2" Spacing="6">
+                <CheckBox IsChecked="{Binding EstConfirmee}"
+                          Color="{StaticResource GcPrimaire}" />
+                <Label Text="Je confirme la commande" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Row="7" Grid.ColumnSpan="2" Spacing="12"
+                                   HorizontalOptions="End">
+                <Button Text="Annuler" />
+                <!-- Actif seulement si PeutEnregistrer() renvoie true (CanExecute) -->
+                <Button Text="Enregistrer" Style="{StaticResource PrimaryButton}"
+                        Command="{Binding EnregistrerCommand}" />
+            </HorizontalStackLayout>
+
+            <!-- Ligne 8 : erreurs (rouge) et confirmation (vert) -->
+            <VerticalStackLayout Grid.Row="8" Grid.ColumnSpan="2" Spacing="4">
+                <Label Text="{Binding Erreurs}" TextColor="#C62828" />
+                <Label Text="{Binding Message}" TextColor="#2E7D32"
+                       FontAttributes="Bold" />
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,72 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GestionCommandes.Maui
+build_property.ProjectDir = E:\formations2026\09-21-DotNet-Orleans-GK-FP\reparcourjava_net\module4\ateliers\A5\GestionCommandes.Maui\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/Views/ClientsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.Views.ClientsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ClientsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ClientsPage.xaml
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/Views/CommandePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.Views.CommandePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CommandePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CommandePage.xaml
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/Views/CommandesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.Views.CommandesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CommandesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CommandesPage.xaml
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/Views/ConnexionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.Views.ConnexionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ConnexionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ConnexionPage.xaml
+
+[E:/formations2026/09-21-DotNet-Orleans-GK-FP/reparcourjava_net/module4/ateliers/A5/GestionCommandes.Maui/Views/DetailCommandePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionCommandes.Maui.Views.DetailCommandePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DetailCommandePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DetailCommandePage.xaml

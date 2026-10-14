@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:GestionCommandes.Maui.Models"
+             xmlns:vm="clr-namespace:GestionCommandes.Maui.ViewModels"
+             x:Class="GestionCommandes.Maui.Views.ClientsPage"
+             x:DataType="vm:ClientsViewModel"
+             Title="Clients"
+             BackgroundColor="{StaticResource GcFond}">
+
+    <!-- Déconnexion ; Test 401 = outil de mise au point (supprimé à l'atelier A9) -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Déconnexion" Command="{Binding SeDeconnecterCommand}" />
+        <ToolbarItem Text="Test 401" Command="{Binding InvaliderJetonCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="Auto,Auto,*" Padding="16" RowSpacing="12">
+
+        <!-- Ligne 0 : en-tête -->
+        <VerticalStackLayout Grid.Row="0" Spacing="4">
+            <Label Text="Clients" FontAttributes="Bold"
+                   FontSize="{OnPlatform Android=22, WinUI=28, Default=24}"
+                   TextColor="{StaticResource GcPrimaire}" />
+            <Label Text="{Binding Clients.Count, StringFormat='{0} client(s)'}"
+                   TextColor="{StaticResource GcTexteSecondaire}" />
+            <Label Text="{Binding Message}" TextColor="#C62828" />
+        </VerticalStackLayout>
+
+        <!-- Ligne 1 : bouton de chargement et indicateur d'activité -->
+        <HorizontalStackLayout Grid.Row="1" Spacing="12">
+            <Button Text="Actualiser" Style="{StaticResource PrimaryButton}"
+                    Command="{Binding ChargerClientsCommand}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                               IsVisible="{Binding IsBusy}"
+                               Color="{StaticResource GcPrimaire}" />
+        </HorizontalStackLayout>
+
+        <!-- Ligne 2 : la liste, alimentée par le ViewModel -->
+        <CollectionView Grid.Row="2" x:Name="ListeClients"
+                        ItemsSource="{Binding Clients}">
+
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="{OnIdiom Phone=1, Tablet=2, Desktop=3, Default=1}"
+                                 HorizontalItemSpacing="8" />
+            </CollectionView.ItemsLayout>
+
+            <!-- Affiché tant que la liste est vide -->
+            <CollectionView.EmptyView>
+                <Label Text="Aucun client à afficher."
+                       TextColor="{StaticResource GcTexteSecondaire}"
+                       HorizontalOptions="Center" Margin="0,24" />
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Client">
+                    <Border Margin="0,0,0,8" Padding="12"
+                            BackgroundColor="{StaticResource GcCarte}"
+                            Stroke="{StaticResource GcBordure}"
+                            StrokeShape="RoundRectangle 8">
+                        <VerticalStackLayout Spacing="2">
+                            <Label Text="{Binding Nom}" FontSize="16"
+                                   FontAttributes="Bold" />
+                            <Label Text="{Binding Email}"
+                                   TextColor="{StaticResource GcTexteSecondaire}" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
